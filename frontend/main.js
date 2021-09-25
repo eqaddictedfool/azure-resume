@@ -1,20 +1,20 @@
-Window.addeventlistener('domcontentloaded', (event) =>{
+Window.addeventlistener('DOMContentLoaded', (event) =>{
     getvisitcount();
 })
 
-const functionapi = ``;
+const functionApi = `http://localhost:7071/api/Getresumecounter`;
 
 const getvisitcount = () => {
-    let count = 30;
-    fetch(functionapi).then(Response) => {
+    let Count = 30;
+    fetch(functionApi).then(Response => {
         return Response.json()
 
     }).then(Response =>{
         console.log("Website called function API");
-        count = Response.count;
-        document.getElementById("counter").innertext = count;
+        Count = Response.count;
+        document.getElementById("Counter").innertext = Count;
     }).catch(function(error){
         console.log(error);
     });
-    return count;
+    return Count;
 }
