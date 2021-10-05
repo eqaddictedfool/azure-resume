@@ -25,7 +25,7 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "greaterfaydarkcdn" --name "greaterfaydark.azureedge.net" --resource-group "Azureresume-rg"
+           az cdn endpoint purge --content-paths  "/*" --profile-name "greaterfaydarkcdn" --name "greaterfaydark" --resource-group "Azureresume-rg"
 
   # Azure logout
     - name: logout
